@@ -25,7 +25,7 @@
                 TODO: Display all contacts here. Each contact should be retrieved from the database and displayed through rendering `../partials/card.hbs`.
             -->
             <div id="contacts">
-            <!-- your code here -->
+                {{#each contacts}} {{> card this}} {{/each}}
             </div>
         </div>
     </div>
