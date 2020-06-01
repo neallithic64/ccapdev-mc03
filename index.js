@@ -16,6 +16,6 @@ app.use('/', routes);
 
 db.connect();
 
-app.listen(port, function () {
+app.listen(port, function() {
 	console.log('Listening at port ' + port);
 });

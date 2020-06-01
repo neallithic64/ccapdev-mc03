@@ -35,9 +35,10 @@ $(document).ready(function() {
 		var card = $(this),
 			text = card.siblings('div').text(),
 			contact = text.trim().split(/(\s)/);
+
 		$.get('/delete', {number: contact[contact.length-1]}, function(result) {
 			if (result) card.parent().remove();
 		});
 	});
 
-})
+});
