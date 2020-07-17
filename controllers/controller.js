@@ -17,7 +17,6 @@ const controller = {
 
 	getCheckNumber: function(req, res) {
 		var numInput = req.query.number;
-		
 		db.findOne(User, {number: numInput}, '', function(result) {
 			if (result) res.send(result);
 			else res.send('');
@@ -39,7 +38,6 @@ const controller = {
 
 	getDelete: function (req, res) {
 		var num = req.query.number;
-
 		db.deleteOne(User, {number: num}, function(result) {
 			res.send(result);
 		});
